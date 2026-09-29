@@ -25,12 +25,14 @@ Refer to the official [nnU-Net Installation Guide](https://github.com/MIC-DKFZ/n
 
 Pre-trained model weights are required to run inference.
 
-* **Download Link:** [Insert Drive Here]
+* **Download Link:** [LINK OR FOLDER]
 * **Setup:** Place the downloaded weights into your designated `RESULTS_FOLDER` following standard nnU-Net folder structure.
 
 ---
 
 ## Data Preparation
+
+>> RIGHT???? 
 
 Input images must be in **NIfTI (`.nii.gz`)** format and follow the nnU-Net naming convention (`<patientID>_<channel>.nii.gz`):
 
@@ -47,7 +49,7 @@ Run prediction from the terminal by pointing to your input data directory (`PATH
 
 ```bash
 nnUNet_predict -i /path/to/PATH_INPUT -o /path/to/PATH_OUTPUT -t 1
-
+```
 
 ## Contact & Support
 
