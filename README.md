@@ -25,8 +25,8 @@ Refer to the official [nnU-Net Installation Guide](https://github.com/MIC-DKFZ/n
 
 Pre-trained models' weights are required to run inference.
 
-* **Download Link for anterior segmentator model:** [LINK OR FOLDER]
-* **Download Link for posterior segmentator model:** [LINK OR FOLDER]
+* **Download Link for anterior segmentator model:** [Link available when the paper is accepted]
+* **Download Link for posterior segmentator model:** [Link available when the paper is accepted]
 * **Setup:** Place the downloaded weights into your designated `RESULTS_FOLDER` following standard nnU-Net folder structure.
 
 ---
