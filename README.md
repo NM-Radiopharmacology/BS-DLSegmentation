@@ -6,7 +6,7 @@ Fully automatic deep learning models for segmenting bone metastases in both **an
 
 ## Table of Contents
 - [Prerequisites & Installation](#prerequisites--installation)
-- [Model Weights](#model-weights)
+- [Models' Weights](#model-weights)
 - [Data Preparation](#data-preparation)
 - [Inference](#inference)
 - [Contact & Citation](#contact--citation)
@@ -21,25 +21,30 @@ Refer to the official [nnU-Net Installation Guide](https://github.com/MIC-DKFZ/n
 
 ---
 
-## Model Weights
+## Models' Weights
 
-Pre-trained model weights are required to run inference.
+Pre-trained models' weights are required to run inference.
 
-* **Download Link:** [LINK OR FOLDER]
+* **Download Link for anterior segmentator model:** [LINK OR FOLDER]
+* **Download Link for posterior segmentator model:** [LINK OR FOLDER]
 * **Setup:** Place the downloaded weights into your designated `RESULTS_FOLDER` following standard nnU-Net folder structure.
 
 ---
 
 ## Data Preparation
 
->> RIGHT???? 
-
 Input images must be in **NIfTI (`.nii.gz`)** format and follow the nnU-Net naming convention (`<patientID>_<channel>.nii.gz`):
 
+To segment anterior prejections:
 * `patientID_0000.nii.gz`: Anterior projection
-* `patientID_0001.nii.gz`: Posterior projection
+* `patientID_0001.nii.gz`: Mirrored posterior projection
 
-> **Note:** If your input formats or channels differ, adjust the channel indices (`_0000`, `_0001`) to match your training setup.
+* To segment posterior prejections:
+* `patientID_0000.nii.gz`: Posterior projection
+* `patientID_0001.nii.gz`: Inverted anterior projection 
+
+> **Note 1:** If your input formats or channels differ, adjust the channel indices (`_0000`, `_0001`) to match your training setup.
+> **Note 2:** Please pre-process images as 3D volumes before input. Consider transposing 2D images to 3D with the following structure [1,X,Y]. For instance, in our case scans, the dimension was [1, 512, 1024]. The pixel size for the first dimension should be greater or equal do the pixel size of the other dimensions.
 
 ---
 
